@@ -7,23 +7,35 @@
 //
 
 import UIKit
+// 类似OC中的宏定义
+private let kTitleViewH: CGFloat = 40
 
 class CommendVC: UIViewController {
-
+    // 懒加载属性 以闭包的形式
+    private lazy var pageTitleView: PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: kNavigationBarH, width: kScreenW, height: kTitleViewH)
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        //titleView.backgroundColor = UIColor.purple
+        return titleView;
+    }()
+    
+    // 系统的回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
-    }
-  
-
+    } 
 }
 
+// 类扩展
 // MARK: 设置UI界面
 extension CommendVC {
     private func setupUI() {
-        
+        // 添加导航栏
         setupNavBar()
+        // 添加titleView
+        view.addSubview(pageTitleView)
         
     }
     // 设置导航栏
@@ -36,7 +48,7 @@ extension CommendVC {
         
         // 设置右边按钮
         // 观看历史 便利构造器方式  苹果更建议用此种方式，而不是类方法
-//        let historyItem = UIBarButtonItem.creatItem(imageName: "image_my_history", highImageName: "image_my_history_click", size: CGSize(width: 30, height: 30))
+        // let historyItem = UIBarButtonItem.creatItem(imageName: "image_my_history", highImageName: "image_my_history_click", size: CGSize(width: 30, height: 30))
         let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: CGSize(width: 30, height: 30))
         // 游戏中心  类方法（不建议）
         let gameCenterItem = UIBarButtonItem.creatItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: CGSize(width: 30, height: 30))

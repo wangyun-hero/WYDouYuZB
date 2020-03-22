@@ -20,6 +20,8 @@
 		CB6D62A82427773100ACE46E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6D62A72427773100ACE46E /* Discover.storyboard */; };
 		CB6D62AA2427776800ACE46E /* CommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62A92427776800ACE46E /* CommendVC.swift */; };
 		CB6D62AD242780A100ACE46E /* UIBarButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62AC242780A100ACE46E /* UIBarButton-Extension.swift */; };
+		CB6D62AF2427AFB200ACE46E /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62AE2427AFB200ACE46E /* PageTitleView.swift */; };
+		CB6D62B12427B33000ACE46E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62B02427B33000ACE46E /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CB6D62A72427773100ACE46E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = "WYDouYuZB/Class/Discover(发现)/Discover.storyboard"; sourceTree = SOURCE_ROOT; };
 		CB6D62A92427776800ACE46E /* CommendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendVC.swift; sourceTree = "<group>"; };
 		CB6D62AC242780A100ACE46E /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
+		CB6D62AE2427AFB200ACE46E /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		CB6D62B02427B33000ACE46E /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CB6D62AB2427804900ACE46E /* Extension */,
+				CB6D62B02427B33000ACE46E /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 		CB6D62A1242775B300ACE46E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB6D62AE2427AFB200ACE46E /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6D62AF2427AFB200ACE46E /* PageTitleView.swift in Sources */,
 				CB6D62902427724000ACE46E /* MainViewController.swift in Sources */,
 				CB1E4520242751C2000B25AB /* AppDelegate.swift in Sources */,
 				CB6D62AA2427776800ACE46E /* CommendVC.swift in Sources */,
 				CB6D62AD242780A100ACE46E /* UIBarButton-Extension.swift in Sources */,
 				CB1E4522242751C2000B25AB /* SceneDelegate.swift in Sources */,
+				CB6D62B12427B33000ACE46E /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
