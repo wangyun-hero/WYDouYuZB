@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("测试提交")
         // Do any additional setup after loading the view.
     }
 
