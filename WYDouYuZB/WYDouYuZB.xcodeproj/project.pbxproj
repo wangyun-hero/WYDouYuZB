@@ -19,6 +19,7 @@
 		CB6D62A62427770300ACE46E /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6D62A52427770300ACE46E /* Follow.storyboard */; };
 		CB6D62A82427773100ACE46E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6D62A72427773100ACE46E /* Discover.storyboard */; };
 		CB6D62AA2427776800ACE46E /* CommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62A92427776800ACE46E /* CommendVC.swift */; };
+		CB6D62AD242780A100ACE46E /* UIBarButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62AC242780A100ACE46E /* UIBarButton-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CB6D62A52427770300ACE46E /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = "WYDouYuZB/Class/Follow(关注)/Follow.storyboard"; sourceTree = SOURCE_ROOT; };
 		CB6D62A72427773100ACE46E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = "WYDouYuZB/Class/Discover(发现)/Discover.storyboard"; sourceTree = SOURCE_ROOT; };
 		CB6D62A92427776800ACE46E /* CommendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendVC.swift; sourceTree = "<group>"; };
+		CB6D62AC242780A100ACE46E /* UIBarButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		CB1E453624276786000B25AB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CB6D62AB2427804900ACE46E /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -293,6 +296,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CB6D62AB2427804900ACE46E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CB6D62AC242780A100ACE46E /* UIBarButton-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -373,6 +384,7 @@
 				CB6D62902427724000ACE46E /* MainViewController.swift in Sources */,
 				CB1E4520242751C2000B25AB /* AppDelegate.swift in Sources */,
 				CB6D62AA2427776800ACE46E /* CommendVC.swift in Sources */,
+				CB6D62AD242780A100ACE46E /* UIBarButton-Extension.swift in Sources */,
 				CB1E4522242751C2000B25AB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
