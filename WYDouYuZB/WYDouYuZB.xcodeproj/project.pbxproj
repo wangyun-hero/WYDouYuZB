@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CB1E4520242751C2000B25AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E451F242751C2000B25AB /* AppDelegate.swift */; };
 		CB1E4522242751C2000B25AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E4521242751C2000B25AB /* SceneDelegate.swift */; };
-		CB1E4524242751C2000B25AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E4523242751C2000B25AB /* ViewController.swift */; };
 		CB1E4527242751C2000B25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1E4525242751C2000B25AB /* Main.storyboard */; };
 		CB1E4529242751C3000B25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1E4528242751C3000B25AB /* Assets.xcassets */; };
 		CB1E452C242751C3000B25AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1E452A242751C3000B25AB /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		CB1E451C242751C2000B25AB /* WYDouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYDouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1E451F242751C2000B25AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1E4521242751C2000B25AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB1E4523242751C2000B25AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB1E4526242751C2000B25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB1E4528242751C3000B25AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1E452B242751C3000B25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,78 @@
 		CB1E451E242751C2000B25AB /* WYDouYuZB */ = {
 			isa = PBXGroup;
 			children = (
+				CB1E453324276786000B25AB /* Class */,
 				CB1E451F242751C2000B25AB /* AppDelegate.swift */,
 				CB1E4521242751C2000B25AB /* SceneDelegate.swift */,
-				CB1E4523242751C2000B25AB /* ViewController.swift */,
 				CB1E4525242751C2000B25AB /* Main.storyboard */,
 				CB1E4528242751C3000B25AB /* Assets.xcassets */,
 				CB1E452A242751C3000B25AB /* LaunchScreen.storyboard */,
 				CB1E452D242751C3000B25AB /* Info.plist */,
 			);
 			path = WYDouYuZB;
+			sourceTree = "<group>";
+		};
+		CB1E453324276786000B25AB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				CB1E453624276786000B25AB /* Tools */,
+				CB1E453A24276786000B25AB /* Main */,
+				CB1E453824276786000B25AB /* Commend(推荐) */,
+				CB1E453724276786000B25AB /* Play(娱乐) */,
+				CB1E453424276786000B25AB /* Follow(关注) */,
+				CB1E453524276786000B25AB /* Community(鱼吧) */,
+				CB1E453924276786000B25AB /* Discover(发现) */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		CB1E453424276786000B25AB /* Follow(关注) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Follow(关注)";
+			sourceTree = "<group>";
+		};
+		CB1E453524276786000B25AB /* Community(鱼吧) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Community(鱼吧)";
+			sourceTree = "<group>";
+		};
+		CB1E453624276786000B25AB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CB1E453724276786000B25AB /* Play(娱乐) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Play(娱乐)";
+			sourceTree = "<group>";
+		};
+		CB1E453824276786000B25AB /* Commend(推荐) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Commend(推荐)";
+			sourceTree = "<group>";
+		};
+		CB1E453924276786000B25AB /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		CB1E453A24276786000B25AB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1E4524242751C2000B25AB /* ViewController.swift in Sources */,
 				CB1E4520242751C2000B25AB /* AppDelegate.swift in Sources */,
 				CB1E4522242751C2000B25AB /* SceneDelegate.swift in Sources */,
 			);
