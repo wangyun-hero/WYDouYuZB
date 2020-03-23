@@ -12,7 +12,7 @@ private let kTitleViewH: CGFloat = 40
 
 class CommendVC: UIViewController {
     // 标题titleView 懒加载属性 以闭包的形式
-    private lazy var pageTitleView: PageTitleView = {
+    private lazy var pageTitleView: PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
@@ -34,6 +34,7 @@ class CommendVC: UIViewController {
             
         }
         let pageContentView = PageContentView(frame: pageContentViewFrame, childVCs: childs, parentViewController: self)
+        pageContentView.delegate = self
         return pageContentView
     }()
     
@@ -86,5 +87,12 @@ extension CommendVC: PageTitleViewDelegate {
     func pageTitleView(titleView: PageTitleView,index: Int) {
         print(index)
         pageContentView.currentIndex(currentIndex: index)
+    }
+}
+
+extension CommendVC: PageContentViewDelegate {
+    func PageContentViewDelegate(pageContentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        pageTitleView.changeTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
