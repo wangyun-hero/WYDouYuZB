@@ -6,6 +6,7 @@
 //  Copyright © 2020 王云. All rights reserved.
 //
 
+// 首页顶部 标题titleView
 import UIKit
 private let kScrollViewLineH: CGFloat = 2.0
 class PageTitleView: UIView {
@@ -38,14 +39,12 @@ class PageTitleView: UIView {
         // 设置UI
         setupUI()
         
-        
     }
     
     // 自定义构造函数时候跟着必写
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 // 类扩展 设置UI

@@ -11,13 +11,30 @@ import UIKit
 private let kTitleViewH: CGFloat = 40
 
 class CommendVC: UIViewController {
-    // 懒加载属性 以闭包的形式
+    // 标题titleView 懒加载属性 以闭包的形式
     private lazy var pageTitleView: PageTitleView = {
         let titleFrame = CGRect(x: 0, y: kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         //titleView.backgroundColor = UIColor.purple
         return titleView;
+    }()
+    
+    // 内容pageContentView
+    private lazy var pageContentView: PageContentView = {
+        let pageContentViewFrameH = kScreenH - (kNavigationBarH + kTitleViewH + kTabBarH)
+        let pageContentViewFrame = CGRect(x: 0, y: kNavigationBarH + kTitleViewH, width: kScreenW, height: pageContentViewFrameH)
+        
+        var childs = [UIViewController]()
+        
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childs.append(vc)
+            
+        }
+        let pageContentView = PageContentView(frame: pageContentViewFrame, childVCs: childs, parentViewController: self)
+        return pageContentView
     }()
     
     // 系统的回调函数
@@ -36,6 +53,9 @@ extension CommendVC {
         setupNavBar()
         // 添加titleView
         view.addSubview(pageTitleView)
+        // 添加contenview
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.purple
         
     }
     // 设置导航栏
