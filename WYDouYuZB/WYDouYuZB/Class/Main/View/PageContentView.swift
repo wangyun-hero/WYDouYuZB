@@ -13,13 +13,14 @@ private let contentCellID: String = "contentCellID"
 class PageContentView: UIView {
     // 定义属性
     private var childVCs:[UIViewController]
-    private var parentViewController: UIViewController
+    // 注意： weak 修饰的对象最后 必须加上 ？
+    private weak var parentViewController: UIViewController?
     
-    // 懒加载属性CollectionView
-    private lazy var collectionView: UICollectionView = {
+    // 懒加载属性CollectionView  在闭包里面使用self，要注意循环引用
+    private lazy var collectionView: UICollectionView = {[weak self] in
         // 创建layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)! // 注意写法
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -36,7 +37,7 @@ class PageContentView: UIView {
     }()
     
     // 构造方法
-    init(frame: CGRect,childVCs: [UIViewController],parentViewController: UIViewController) {
+    init(frame: CGRect,childVCs: [UIViewController],parentViewController: UIViewController?) {
         
         self.childVCs = childVCs
         self.parentViewController = parentViewController
@@ -57,7 +58,7 @@ extension PageContentView {
    private func setupUI() {
     // 添加自控制器
     for childVC in childVCs {
-        parentViewController.addChild(childVC)
+        parentViewController?.addChild(childVC)
     }
     
     // 添加CollectionView
@@ -94,4 +95,13 @@ extension PageContentView: UICollectionViewDataSource,UICollectionViewDelegate {
     }
     
     
+}
+
+// 对外暴露的方法
+extension PageContentView {
+    // 从外界传入index进行处理
+    func currentIndex(currentIndex:Int) -> (Void) {
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+    }
 }

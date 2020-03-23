@@ -16,12 +16,12 @@ class CommendVC: UIViewController {
         let titleFrame = CGRect(x: 0, y: kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
-        //titleView.backgroundColor = UIColor.purple
+        titleView.delegate = self
         return titleView;
     }()
     
     // 内容pageContentView
-    private lazy var pageContentView: PageContentView = {
+    private lazy var pageContentView: PageContentView = {[weak self] in
         let pageContentViewFrameH = kScreenH - (kNavigationBarH + kTitleViewH + kTabBarH)
         let pageContentViewFrame = CGRect(x: 0, y: kNavigationBarH + kTitleViewH, width: kScreenW, height: pageContentViewFrameH)
         
@@ -80,4 +80,11 @@ extension CommendVC {
         
     }
     
+}
+
+extension CommendVC: PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView,index: Int) {
+        print(index)
+        pageContentView.currentIndex(currentIndex: index)
+    }
 }

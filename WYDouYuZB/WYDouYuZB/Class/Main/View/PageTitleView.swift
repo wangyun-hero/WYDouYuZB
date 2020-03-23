@@ -8,11 +8,30 @@
 
 // 首页顶部 标题titleView
 import UIKit
+
+/*
+ 通过代理通知外界点击了lable
+ class 表示只能被类遵守
+ */
+protocol PageTitleViewDelegate: class{
+    func pageTitleView(titleView: PageTitleView,index: Int)
+}
+
+
+
 private let kScrollViewLineH: CGFloat = 2.0
 class PageTitleView: UIView {
 
     // 定义属性
+    // 记录上一个label 的 index
+    private var currentIndex: Int = 0
+    
+    // 记录标题
     private var titles: [String]
+    
+    // 代理属性
+    weak var delegate: PageTitleViewDelegate?
+    
     // 懒加载数组，记录labels
     private lazy var titleLabels: [UILabel] = [UILabel]()
     // 懒加载Scrollview
@@ -32,11 +51,13 @@ class PageTitleView: UIView {
     }()
     
     // 自定义构造函数
-    init(frame: CGRect,titles: [String]) {
+    init(frame: CGRect, titles: [String]) {
+        
         self.titles = titles
+        
         super.init(frame: frame)
         
-        // 设置UI
+        // 设置 UI 界面
         setupUI()
         
     }
@@ -87,6 +108,11 @@ extension PageTitleView {
             // 添加label
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            // 处理交互 给label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(labelCilck(tapGes:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     
@@ -105,5 +131,35 @@ extension PageTitleView {
         firstLabel.textColor = UIColor.orange
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollViewLineH, width: firstLabel.frame.width, height: kScrollViewLineH)
+    }
+}
+
+
+// 按钮手势监听
+extension PageTitleView {
+    /*
+     @objc 自定义点击事件必须写
+     tapGes.view as? UILabel 转为UILabel
+     */
+    @objc private func labelCilck(tapGes: UITapGestureRecognizer) {
+        print("label被点击了")
+        // 获取当前label的下标
+        guard let currentLabel = tapGes.view as? UILabel else { return  }
+        // 获取上一个点击的label
+        let oldLabel = titleLabels[currentIndex]
+        // 将现在点击的index进行记录
+        currentIndex = currentLabel.tag
+        // 获取上一个点击label的index
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        // 滚动条位置变化
+        let scrollLinePositionX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLinePositionX
+        }
+        
+        // 通知代理
+        delegate?.pageTitleView(titleView: self, index: currentIndex)
     }
 }
