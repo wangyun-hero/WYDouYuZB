@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewNormalCell" customModule="WYDouYuZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="268" height="197"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="268" height="197"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="德玛西亚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnw-Om-g4d">
+                        <rect key="frame" x="39" y="172" width="50" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Rso-iv-1OS">
+                        <rect key="frame" x="10" y="173" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="EhI-kJ-dgi"/>
+                            <constraint firstAttribute="width" constant="14" id="tJX-Rt-LFD"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="TtF-sm-2Ti">
+                        <rect key="frame" x="0.0" y="0.0" width="268" height="163"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="德玛西亚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ht-Ds-K41">
+                        <rect key="frame" x="10" y="137" width="54" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2s-AI-0uk">
+                        <rect key="frame" x="208" y="136.5" width="60" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="fJt-H8-vlc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="666" image="ico_location"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Nnw-Om-g4d" secondAttribute="bottom" constant="10" id="05o-IL-yi3"/>
+                <constraint firstItem="Rso-iv-1OS" firstAttribute="top" secondItem="TtF-sm-2Ti" secondAttribute="bottom" constant="10" id="2aX-Ev-ekO"/>
+                <constraint firstAttribute="trailing" secondItem="TtF-sm-2Ti" secondAttribute="trailing" id="79Q-Ub-TdT"/>
+                <constraint firstItem="TtF-sm-2Ti" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OoR-dy-hBB"/>
+                <constraint firstItem="8Ht-Ds-K41" firstAttribute="leading" secondItem="TtF-sm-2Ti" secondAttribute="leading" constant="10" id="Uoa-nD-bjf"/>
+                <constraint firstAttribute="bottom" secondItem="Rso-iv-1OS" secondAttribute="bottom" constant="10" id="VXY-DF-huP"/>
+                <constraint firstItem="Rso-iv-1OS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dQV-Pi-IHA"/>
+                <constraint firstItem="8Ht-Ds-K41" firstAttribute="bottom" secondItem="TtF-sm-2Ti" secondAttribute="bottom" constant="-10" id="l3n-eD-l03"/>
+                <constraint firstAttribute="trailing" secondItem="p2s-AI-0uk" secondAttribute="trailing" id="nvD-dV-gnh"/>
+                <constraint firstItem="Nnw-Om-g4d" firstAttribute="leading" secondItem="Rso-iv-1OS" secondAttribute="trailing" constant="15" id="s5F-E7-Jwl"/>
+                <constraint firstItem="p2s-AI-0uk" firstAttribute="centerY" secondItem="8Ht-Ds-K41" secondAttribute="centerY" id="t9R-83-KEi"/>
+                <constraint firstItem="TtF-sm-2Ti" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uRI-W3-Q6Z"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="268" height="197"/>
+            <point key="canvasLocation" x="155.07246376811597" y="70.647321428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172.5" height="103.5"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+        <image name="ico_location" width="12" height="12"/>
+    </resources>
+</document>

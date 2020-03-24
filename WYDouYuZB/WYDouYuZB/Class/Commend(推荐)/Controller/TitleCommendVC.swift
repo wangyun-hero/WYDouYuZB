@@ -10,7 +10,7 @@ import UIKit
 
 private let kItemMargin: CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kItemH = kScreenW * 3 / 4
+private let kItemH = kItemW * 3 / 4
 private let kHeadViewH: CGFloat = 50
 class TitleCommendVC: UIViewController {
 
@@ -26,10 +26,10 @@ class TitleCommendVC: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         // 随着父控件拉伸
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        collectionView.backgroundColor = UIColor.purple
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: "head", withReuseIdentifier: "headView")
+        collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView.register(UINib(nibName: "TitleCommendHeadView", bundle: nil), forSupplementaryViewOfKind: "head", withReuseIdentifier: "headView")
         return collectionView
     }()
     
@@ -40,7 +40,6 @@ class TitleCommendVC: UIViewController {
         // 设置布局
         setupUI()
     }
-
 }
 
 // 设置UI
@@ -48,7 +47,6 @@ extension TitleCommendVC {
     func setupUI() {
         view.addSubview(collectionView)
     }
-    
 }
 
 // 数据源
@@ -65,13 +63,13 @@ extension TitleCommendVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = UIColor.yellow
+//        cell.contentView.backgroundColor = UIColor.yellow
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headView = collectionView.dequeueReusableSupplementaryView(ofKind: "head", withReuseIdentifier: "headView", for: indexPath)
-        headView.backgroundColor = UIColor.green
+//        headView.backgroundColor = UIColor.green
         return headView
     }
     

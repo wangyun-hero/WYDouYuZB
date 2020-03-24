@@ -25,6 +25,10 @@
 		CB6D62B324285E3600ACE46E /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62B224285E3600ACE46E /* PageContentView.swift */; };
 		CB6D62B5242865FB00ACE46E /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6D62B4242865FB00ACE46E /* UIColor-Extension.swift */; };
 		CBF235182429C7AF001A39E4 /* TitleCommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF235172429C7AF001A39E4 /* TitleCommendVC.swift */; };
+		CBF2351F2429D710001A39E4 /* TitleCommendHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF2351D2429D710001A39E4 /* TitleCommendHeadView.swift */; };
+		CBF235202429D710001A39E4 /* TitleCommendHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF2351E2429D710001A39E4 /* TitleCommendHeadView.xib */; };
+		CBF235232429E05F001A39E4 /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF235212429E05F001A39E4 /* CollectionViewNormalCell.swift */; };
+		CBF235242429E05F001A39E4 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF235222429E05F001A39E4 /* CollectionViewNormalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		CB6D62B224285E3600ACE46E /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		CB6D62B4242865FB00ACE46E /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		CBF235172429C7AF001A39E4 /* TitleCommendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCommendVC.swift; sourceTree = "<group>"; };
+		CBF2351D2429D710001A39E4 /* TitleCommendHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCommendHeadView.swift; sourceTree = "<group>"; };
+		CBF2351E2429D710001A39E4 /* TitleCommendHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCommendHeadView.xib; sourceTree = "<group>"; };
+		CBF235212429E05F001A39E4 /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
+		CBF235222429E05F001A39E4 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,8 @@
 		CB6D62922427755700ACE46E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBF2351D2429D710001A39E4 /* TitleCommendHeadView.swift */,
+				CBF2351E2429D710001A39E4 /* TitleCommendHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +309,8 @@
 			children = (
 				CB6D62AE2427AFB200ACE46E /* PageTitleView.swift */,
 				CB6D62B224285E3600ACE46E /* PageContentView.swift */,
+				CBF235212429E05F001A39E4 /* CollectionViewNormalCell.swift */,
+				CBF235222429E05F001A39E4 /* CollectionViewNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +398,8 @@
 				CB6D62A4242776B500ACE46E /* Commend.storyboard in Resources */,
 				CB6D62A62427770300ACE46E /* Follow.storyboard in Resources */,
 				CB6D62A82427773100ACE46E /* Discover.storyboard in Resources */,
+				CBF235202429D710001A39E4 /* TitleCommendHeadView.xib in Resources */,
+				CBF235242429E05F001A39E4 /* CollectionViewNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +413,9 @@
 				CB6D62AF2427AFB200ACE46E /* PageTitleView.swift in Sources */,
 				CB6D62902427724000ACE46E /* MainViewController.swift in Sources */,
 				CB1E4520242751C2000B25AB /* AppDelegate.swift in Sources */,
+				CBF2351F2429D710001A39E4 /* TitleCommendHeadView.swift in Sources */,
 				CB6D62B324285E3600ACE46E /* PageContentView.swift in Sources */,
+				CBF235232429E05F001A39E4 /* CollectionViewNormalCell.swift in Sources */,
 				CB6D62B5242865FB00ACE46E /* UIColor-Extension.swift in Sources */,
 				CB6D62AA2427776800ACE46E /* CommendVC.swift in Sources */,
 				CB6D62AD242780A100ACE46E /* UIBarButton-Extension.swift in Sources */,
