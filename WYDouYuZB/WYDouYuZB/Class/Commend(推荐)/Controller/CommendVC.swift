@@ -25,11 +25,11 @@ class CommendVC: UIViewController {
         let pageContentViewFrameH = kScreenH - (kNavigationBarH + kTitleViewH + kTabBarH)
         let pageContentViewFrame = CGRect(x: 0, y: kNavigationBarH + kTitleViewH, width: kScreenW, height: pageContentViewFrameH)
         
-        var childs = [UIViewController]()
+        var childs = [TitleCommendVC]()
         
         for _ in 0..<4 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            let vc = TitleCommendVC()
+//            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childs.append(vc)
             
         }
