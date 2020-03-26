@@ -66,6 +66,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="268" height="197"/>
+            <connections>
+                <outlet property="backImageView" destination="TtF-sm-2Ti" id="AOk-Dh-Pxz"/>
+            </connections>
             <point key="canvasLocation" x="155.07246376811597" y="70.647321428571431"/>
         </collectionViewCell>
     </objects>

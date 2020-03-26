@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewPrettyCell" customModule="WYDouYuZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="263"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="263"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciX-tH-Llf">
+                        <rect key="frame" x="10" y="237" width="52" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="W85-Pm-vgC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="广州市" image="ico_location">
+                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="云先生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-H1-81C">
+                        <rect key="frame" x="10" y="211" width="40" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="O8N-MI-kBS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="VE4-iq-WYI">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="201"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="202200在线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l9-xI-2Nl">
+                        <rect key="frame" x="181" y="10" width="69" height="15"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VE4-iq-WYI" secondAttribute="trailing" id="7Nk-q0-6dP"/>
+                <constraint firstItem="VE4-iq-WYI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Yp-qh-fbf"/>
+                <constraint firstItem="2l9-xI-2Nl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="9VN-Az-qgl"/>
+                <constraint firstItem="Rgq-H1-81C" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="BSJ-P8-Khf"/>
+                <constraint firstItem="VE4-iq-WYI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L1q-UO-qiH"/>
+                <constraint firstItem="Rgq-H1-81C" firstAttribute="top" secondItem="VE4-iq-WYI" secondAttribute="bottom" constant="10" id="LfY-PB-99E"/>
+                <constraint firstItem="ciX-tH-Llf" firstAttribute="top" secondItem="Rgq-H1-81C" secondAttribute="bottom" constant="10" id="PUd-Zq-bDg"/>
+                <constraint firstItem="ciX-tH-Llf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Vwg-fc-WVJ"/>
+                <constraint firstAttribute="bottom" secondItem="ciX-tH-Llf" secondAttribute="bottom" constant="10" id="YSz-Li-H29"/>
+                <constraint firstAttribute="trailing" secondItem="2l9-xI-2Nl" secondAttribute="trailing" constant="10" id="lfV-iW-VdK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="260" height="263"/>
+            <connections>
+                <outlet property="backImageView" destination="VE4-iq-WYI" id="Raq-Z0-SxD"/>
+            </connections>
+            <point key="canvasLocation" x="18.840579710144929" y="179.79910714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103.5" height="103.5"/>
+    </resources>
+</document>

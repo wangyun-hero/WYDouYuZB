@@ -11,6 +11,7 @@ import UIKit
 private let kItemMargin: CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kItemH = kItemW * 3 / 4
+private let kItemPrettyH = kItemW * 4 / 3
 private let kHeadViewH: CGFloat = 50
 class TitleCommendVC: UIViewController {
 
@@ -28,7 +29,9 @@ class TitleCommendVC: UIViewController {
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView.register(UINib(nibName: "CollectionViewPrettyCell", bundle: nil), forCellWithReuseIdentifier: "prettyCell")
         collectionView.register(UINib(nibName: "TitleCommendHeadView", bundle: nil), forSupplementaryViewOfKind: "head", withReuseIdentifier: "headView")
         return collectionView
     }()
@@ -50,7 +53,7 @@ extension TitleCommendVC {
 }
 
 // 数据源
-extension TitleCommendVC: UICollectionViewDataSource {
+extension TitleCommendVC: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
@@ -62,8 +65,13 @@ extension TitleCommendVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-//        cell.contentView.backgroundColor = UIColor.yellow
+        
+        var cell = UICollectionViewCell()
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prettyCell", for: indexPath)
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        }
         return cell
     }
     
@@ -72,6 +80,14 @@ extension TitleCommendVC: UICollectionViewDataSource {
 //        headView.backgroundColor = UIColor.green
         return headView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: kItemPrettyH)
+        }
+        return CGSize(width: kItemW, height: kItemH)
+    }
+    
     
     
 }
