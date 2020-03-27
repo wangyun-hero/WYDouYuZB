@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 private let kItemMargin: CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kItemH = kItemW * 3 / 4
@@ -40,6 +40,15 @@ class TitleCommendVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
+        // "http://httpbin.org/get"
+//        URLRequest.init(url: "sss", method: .get).
+        
+        Alamofire.request("http://httpbin.org/get", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { (response) in
+            let json:AnyObject! = try? JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as AnyObject
+            print(json)
+        }
+        
+        
         // 设置布局
         setupUI()
     }

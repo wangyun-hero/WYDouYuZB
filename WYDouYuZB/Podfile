@@ -1,9 +1,9 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '8.0'
-# Comment the next line if you don't want to use dynamic frameworks
+
+project 'WYDouYuZB.xcodeproj'
+platform :ios, '9.0'
 use_frameworks!
+
 target 'WYDouYuZB' do
 
-pod "Alamofire"
-
+    pod 'Alamofire'
 end
